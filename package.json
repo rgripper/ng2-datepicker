@@ -12,8 +12,8 @@
     "clean": "./scripts/clean.sh",
     "dev": "tsc --watch",
     "lint": "tslint ./src/**/*.ts",
-    "sass": "node-sass sass/ng2-datepicker.sass src/components/ng2-datepicker.css",
-    "build": "npm run sass && \"node_modules/.bin/ngc\" -p tsconfig.json",
+    "sass": "node-sass src -o dist",
+    "build": "npm run sass && tsc -p tsconfig.json",
     "prepublish": "npm run build"
   },
   "keywords": [

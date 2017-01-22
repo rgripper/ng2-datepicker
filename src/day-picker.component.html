@@ -1,0 +1,12 @@
+<ul class="header">
+    <li *ngFor="let dayOfWeekName of dayOfWeekNames"></li>
+</ul>
+<ul class="body">
+    <li *ngFor="let week of getWeeksWithDates()">
+        <ul>
+            <button *ngFor="let date of week" style="display: inline-block; width: 3em;" (click)="change.emit(date)">
+                {{date.getDate()}}
+            </button>
+        </ul>
+    </li>
+</ul>
